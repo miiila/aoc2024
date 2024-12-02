@@ -28,4 +28,6 @@ IO.puts(Day#{day}.solve_part_2(input))
 
 download_input(day)
 
-File.write!("./day#{day}.exs", template)
+if !File.exists?("./day#{day}.exs") do
+  File.write!("./day#{day}.exs", template)
+end
